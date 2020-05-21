@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ride Sharing</title>
+</head>
+<body>
+<h1>Ride Sharing users:</h1>
+<% if (users.length === 0) { %>
+    <h2>No other users have registered yet.</h2>
+<% } %>
+<ul>
+    <% users.forEach(user => { -%>
+        <li>
+            <%= user.name %>
+            <a href="send-message/<%= user.id %>">Send message</a>
+        </li>
+    <% }); -%>
+</ul>
+<div>
+    <a href="logout">Log out</a>
+</div>
+</body>
+</html>

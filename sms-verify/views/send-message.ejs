@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send a message</title>
+    <style>
+        textarea {
+            width: 50%;
+            min-height: 300px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+<h1>Send a message to <%= user.name %></h1>
+<form method="post">
+    <label>
+        <textarea name="message" placeholder="Write your message" required></textarea>
+    </label>
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>

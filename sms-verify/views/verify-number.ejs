@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verify your number</title>
+</head>
+<body>
+<h1>Hi <%= name %>, let's verify your phone number</h1>
+<h2>We sent you an SMS with your verification code:</h2>
+<form method="post">
+    <label>
+        <input type="text" pattern="[0-9]*" name="code" placeholder="Enter verification code" required>
+    </label>
+    <button type="submit">Verify</button>
+</form>
+<div>
+    <form action="">
+        <button type="submit">Resend code</button>
+    </form>
+    <a href="logout">Use a different number</a>
+</div>
+</body>
+</html>
